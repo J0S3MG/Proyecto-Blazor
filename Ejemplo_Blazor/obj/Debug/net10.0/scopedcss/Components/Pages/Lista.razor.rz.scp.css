@@ -1,0 +1,68 @@
+.btn-borrar[b-ck55kzcbfm] {
+    color: #e24a4aab;
+}
+
+.btn-detalle[b-ck55kzcbfm] {
+    color: #d63bf57e;
+}
+
+.btn-editar[b-ck55kzcbfm] {
+    color: #7aeeb4a4;
+}
+
+.btn-icono[b-ck55kzcbfm] {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+.btn-borrar:hover[b-ck55kzcbfm] { color: #ff6b6b; }
+.btn-detalle:hover[b-ck55kzcbfm] { color: #d63bf5; }
+.btn-editar:hover[b-ck55kzcbfm] { color: #7aeeb4; }
+
+.confirm-box[b-ck55kzcbfm] {
+    background: #1e1e3a;
+    border: 1.5px solid #e24b4a;
+    border-radius: 12px;
+    padding: 1.5rem;
+    max-width: 340px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: white;
+    text-align: center;
+}
+
+.confirm-footer[b-ck55kzcbfm] {
+    display: flex;
+    gap: 8px;
+}
+
+.confirm-backdrop[b-ck55kzcbfm] {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.btn-danger[b-ck55kzcbfm] {
+    flex: 1;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    background: #e24b4a;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn-danger:hover[b-ck55kzcbfm] {
+    background: #ff6b6b;
+}

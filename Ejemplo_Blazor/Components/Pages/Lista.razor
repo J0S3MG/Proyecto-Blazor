@@ -1,0 +1,127 @@
+﻿@page "/"
+@rendermode InteractiveServer
+@inject NavigationManager Nav
+
+
+<PageTitle>@Titulo</PageTitle>
+
+@if (reunions.Count == 0)
+{
+   <p>No hay reuniones.</p>
+}
+else
+{
+   <table class="table">
+      <thead>
+         <th>Resumen</th>
+         <th>¿Virutal?</th>
+         <th>Acciones</th>
+      </thead>
+      <tbody>
+         @foreach(var r in reunions)
+         {
+            <tr id="@r.Id">
+                <td>@(r.Desc?.Length > 20 ? r.Desc[..20] + "..." : r.Desc)</td>
+                <td>@(r.Virtual ? "Si" : "No")</td>
+                <td>
+                    <button  class="btn-icono btn-borrar" @onclick="() => OnBorrar_Clicked(r.Id)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-minus" viewBox="0 0 16 16">
+                           <path d="M5.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5"/>
+                           <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1"/>
+                        </svg>
+                    </button>
+                    <button  class="btn-icono btn-editar" @onclick="() => OnEdit_Clicked(r)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                           <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                           <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                        </svg>
+                    </button>
+                    <button  class="btn-icono btn-detalle" @onclick="() => OnDetalle_Clicked(r.Id)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                        </svg>
+                    </button>
+                </td>
+            </tr>
+         }
+      </tbody>
+   </table>
+   <ModalEdit visible="modalVisible" reunion="reunionSelec" 
+              OnGuardar="HandleGuardar" OnCerrar="() => modalVisible = false" />
+}
+@if (mostrarConfirm)
+{
+    <div class="confirm-backdrop">
+        <div class="confirm-box">
+            <p>¿Seguro que querés borrar esta reunión?</p>
+            <div class="confirm-footer">
+                <button class="btn-secondary" @onclick="CancelarBorrar">Cancelar</button>
+                <button class="btn-danger" @onclick="ConfirmarBorrar">Borrar</button>
+            </div>
+        </div>
+    </div>
+}
+@code 
+{
+   #region Lista y Titulo
+   private string Titulo = "Lista de Reuniones";
+   public List<Reunion> reunions = new();
+   protected async override Task OnInitializedAsync()
+   {
+      reunions = new()
+      {
+         new(1, "faihsuidhaiusdhaiurhiuaiuabsiudaisudfbaiusbfdiuasbdf", true),
+         new(2, "dasnduasnduiasnduiansiudnasiunduiasnduasodnadasnoidaosidnoiansdoansd", false),
+         new(3,"asdasdasdvchiuofhgwekropgjdgfkgmdpogjdsfjguosajreosflsm,dv",false),
+         new(4,"adsndausnduasndoasdpas",true)
+      };
+   }
+   #endregion
+   
+   #region Detalle y Borrar.
+   private bool mostrarConfirm = false;
+   private int idABorrar;
+
+   private void OnBorrar_Clicked(int id)
+   {
+      idABorrar = id;
+      mostrarConfirm = true;
+   }
+
+   private void ConfirmarBorrar()
+   {
+      var r = reunions.FirstOrDefault(r => r.Id == idABorrar);
+      if (r != null) reunions.Remove(r);
+      mostrarConfirm = false;
+   }
+
+   private void CancelarBorrar()
+   {
+      mostrarConfirm = false;
+   }
+
+   private async Task OnDetalle_Clicked(int id)
+   {
+      Nav.NavigateTo($"/detalle/{id}");
+   }
+   #endregion
+
+   #region Editar.
+   private bool modalVisible = false;
+   private Reunion? reunionSelec;
+
+   private void OnEdit_Clicked(Reunion r)
+   {
+      reunionSelec = r;
+      modalVisible = true;
+   }
+
+   private void HandleGuardar(Reunion editada)
+   {
+      var index = reunions.FindIndex(r => r.Id == editada.Id);
+      if (index >= 0) reunions[index] = editada;
+      modalVisible = false;
+   }
+   #endregion
+}
+
