@@ -1,4 +1,47 @@
 ﻿@page "/form"
-@using System.Diagnostics
+@rendermode InteractiveServer
+@inject NavigationManager Nav
+@inject IReunionRepository Repo
 
-<PageTitle>Error</PageTitle>
+<div class="contenedor-detalle">
+    <div class="contenedor-titulo">
+        <h1>@Titulo</h1>
+    </div>
+    <div class="form-group">
+        <label class="label-principal">Descripción (500 letras)</label>
+        <textarea class="caja-texto" @bind="reunion.Desc" maxlength="500"></textarea>
+        <div class="contador-letras">
+            @(reunion.Desc?.Length ?? 0) letras
+        </div>
+    </div>
+    <div class="opcion-virtual">
+        <label>¿Es virtual?</label>
+        <input type="checkbox" @bind="reunion.Virtual" class="check-virtual" />
+    </div>
+    <div class="footer-detalle">
+        <button class="btn-confirmar" @onclick="OnVolver_Clicked">Volver</button>
+        <button class="btn-confirmar btn-editar" @onclick="() => OnAgregar_Clicked(reunion)">Agregar</button>
+    </div>
+</div>
+@code 
+{
+    private string Titulo = "Agregar Reunion";
+    [Parameter] public int Id { get; set; }
+    [Parameter] public Reunion? reunion { get; set; }
+
+    protected override void OnInitialized()
+    {
+        reunion = new();
+    }
+
+    private void OnVolver_Clicked()
+    {
+        Nav.NavigateTo("/");
+    }
+    
+    private void OnAgregar_Clicked(Reunion r)
+    {
+      Repo.Insert(r);
+      Nav.NavigateTo("/");
+    }
+}

@@ -1,0 +1,94 @@
+/*Layout y Contenedores*/
+.contenedor-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.contenedor-detalle {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 1rem auto;
+    font-family: Arial, sans-serif;
+    gap: 1.5rem;
+}
+
+/*Formulario, Desc y Textarea*/
+.label-principal {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.caja-texto {
+    width: 100%;
+    height: 150px;
+    border: 3px solid black;
+    padding: 10px;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+    background-color: transparent; /* Por si usas modo oscuro */
+}
+
+.contador-letras {
+    text-align: right;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/*Boton Virtual*/
+.opcion-virtual {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.check-virtual {
+    width: 25px;
+    height: 25px;
+    border: 3px solid black;
+    cursor: pointer;
+}
+
+/*Footer y Botones Juntos*/
+.footer-detalle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espacio entre Volver y Editar */
+    margin-top: 1rem;
+}
+
+.btn-confirmar {
+    background: white;
+    border: 3px solid black;
+    padding: 10px 40px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-confirmar:hover {
+    background: #f0f0f0;
+}
+
+/* Botón Editar más grande */
+.btn-icono {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.btn-editar { 
+    color: #7aeeb4a4; 
+}
+
+.btn-editar:hover { 
+    color: #7aeeb4; 
+}

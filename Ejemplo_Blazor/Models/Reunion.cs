@@ -6,6 +6,7 @@ public class Reunion
     public string? Desc { get; set; }
     public bool Virtual { get; set; }
 
+    public Reunion(){ }
     public Reunion(int id, string? desc, bool v)
     {
         Id = id;

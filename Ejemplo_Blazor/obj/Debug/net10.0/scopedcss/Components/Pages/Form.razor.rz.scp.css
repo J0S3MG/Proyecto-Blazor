@@ -1,0 +1,94 @@
+/*Layout y Contenedores*/
+.contenedor-titulo[b-c447y8ttle] {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.contenedor-detalle[b-c447y8ttle] {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 1rem auto;
+    font-family: Arial, sans-serif;
+    gap: 1.5rem;
+}
+
+/*Formulario, Desc y Textarea*/
+.label-principal[b-c447y8ttle] {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.caja-texto[b-c447y8ttle] {
+    width: 100%;
+    height: 150px;
+    border: 3px solid black;
+    padding: 10px;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+    background-color: transparent; /* Por si usas modo oscuro */
+}
+
+.contador-letras[b-c447y8ttle] {
+    text-align: right;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/*Boton Virtual*/
+.opcion-virtual[b-c447y8ttle] {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.check-virtual[b-c447y8ttle] {
+    width: 25px;
+    height: 25px;
+    border: 3px solid black;
+    cursor: pointer;
+}
+
+/*Footer y Botones Juntos*/
+.footer-detalle[b-c447y8ttle] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espacio entre Volver y Editar */
+    margin-top: 1rem;
+}
+
+.btn-confirmar[b-c447y8ttle] {
+    background: white;
+    border: 3px solid black;
+    padding: 10px 40px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-confirmar:hover[b-c447y8ttle] {
+    background: #f0f0f0;
+}
+
+/* Botón Editar más grande */
+.btn-icono[b-c447y8ttle] {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.btn-editar[b-c447y8ttle] { 
+    color: #7aeeb4a4; 
+}
+
+.btn-editar:hover[b-c447y8ttle] { 
+    color: #7aeeb4; 
+}

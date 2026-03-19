@@ -1,24 +1,107 @@
-.btn-borrar[b-ck55kzcbfm] {
-    color: #e24a4aab;
+.contenedor-pagina[b-ck55kzcbfm] {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra todo horizontalmente */
+    margin-top: 2rem;
+    width: 100%;
 }
 
-.btn-detalle[b-ck55kzcbfm] {
-    color: #d63bf57e;
+.header-acciones[b-ck55kzcbfm] {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre input y botones */
+    margin-bottom: 20px; /* Espacio con la tabla */
+    width: 100%;
+    max-width: 600px; /* Misma medida que la tabla para que encaje */
 }
 
-.btn-editar[b-ck55kzcbfm] {
-    color: #7aeeb4a4;
+.input-busqueda[b-ck55kzcbfm] {
+    flex-grow: 1; /* Hace que el input ocupe el espacio restante */
+    padding: 8px;
+    border: 3px solid black;
+    font-size: 16px;
+    outline: none;
 }
 
+.btn-buscar[b-ck55kzcbfm] {
+    padding: 8px 15px;
+    border: 3px solid black;
+    background: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: lowercase;
+}
+
+.btn-agregar[b-ck55kzcbfm] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border: 3px solid gray;
+    background: white;
+    color: #28a745; 
+    cursor: pointer;
+}
+
+/*Estilo de la tabla*/
+.table-reuniones[b-ck55kzcbfm] {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    border: 3px solid black;
+    font-family: Arial, sans-serif;
+}
+
+.table-reuniones th[b-ck55kzcbfm], 
+.table-reuniones td[b-ck55kzcbfm] {
+    border: 2px solid black;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.col-resumen[b-ck55kzcbfm] {
+    text-align: left;
+    width: 60%;
+    font-weight: 500;
+}
+
+.col-virtual[b-ck55kzcbfm] {
+    text-align: center;
+    font-weight: bold;
+    width: 15%;
+}
+
+.col-acciones[b-ck55kzcbfm] {
+    text-align: center;
+    width: 25%;
+}
+
+/*Estilo de los botones*/
 .btn-icono[b-ck55kzcbfm] {
     background: none;
     border: none;
     cursor: pointer;
     padding: 4px;
 }
+
+.btn-borrar[b-ck55kzcbfm] { color: #e24a4aab; }
+.btn-editar[b-ck55kzcbfm] { color: #7aeeb4a4; }
+.btn-detalle[b-ck55kzcbfm] { color: #d63bf57e; }
+
 .btn-borrar:hover[b-ck55kzcbfm] { color: #ff6b6b; }
-.btn-detalle:hover[b-ck55kzcbfm] { color: #d63bf5; }
 .btn-editar:hover[b-ck55kzcbfm] { color: #7aeeb4; }
+.btn-detalle:hover[b-ck55kzcbfm] { color: #d63bf5; }
+
+/*Estilo de la modal*/
+.confirm-backdrop[b-ck55kzcbfm] {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
 
 .confirm-box[b-ck55kzcbfm] {
     background: #1e1e3a;
@@ -37,16 +120,6 @@
 .confirm-footer[b-ck55kzcbfm] {
     display: flex;
     gap: 8px;
-}
-
-.confirm-backdrop[b-ck55kzcbfm] {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.45);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
 }
 
 .btn-danger[b-ck55kzcbfm] {

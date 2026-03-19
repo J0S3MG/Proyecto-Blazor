@@ -361,28 +361,301 @@ main[b-dawmfx4d81] {
         opacity: 0;
     }
 }
+/* /Components/Pages/Detalle.razor.rz.scp.css */
+/*Layout y Contenedores*/
+.contenedor-titulo[b-ghwuhmbe5a] {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.contenedor-detalle[b-ghwuhmbe5a] {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 1rem auto;
+    font-family: Arial, sans-serif;
+    gap: 1.5rem;
+}
+
+/*Formulario, Desc y Textarea*/
+.label-principal[b-ghwuhmbe5a] {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.caja-texto[b-ghwuhmbe5a] {
+    width: 100%;
+    height: 150px;
+    border: 3px solid black;
+    padding: 10px;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+    background-color: transparent; /* Por si usas modo oscuro */
+}
+
+.contador-letras[b-ghwuhmbe5a] {
+    text-align: right;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/*Boton Virtual*/
+.opcion-virtual[b-ghwuhmbe5a] {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.check-virtual[b-ghwuhmbe5a] {
+    width: 25px;
+    height: 25px;
+    border: 3px solid black;
+    cursor: pointer;
+}
+
+/*Footer y Botones Juntos*/
+.footer-detalle[b-ghwuhmbe5a] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espacio entre Volver y Editar */
+    margin-top: 1rem;
+}
+
+.btn-confirmar[b-ghwuhmbe5a] {
+    background: white;
+    border: 3px solid black;
+    padding: 10px 40px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-confirmar:hover[b-ghwuhmbe5a] {
+    background: #f0f0f0;
+}
+
+/* Botón Editar más grande */
+.btn-icono[b-ghwuhmbe5a] {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.btn-editar[b-ghwuhmbe5a] { 
+    color: #7aeeb4a4; 
+}
+
+.btn-editar:hover[b-ghwuhmbe5a] { 
+    color: #7aeeb4; 
+}
+/* /Components/Pages/Form.razor.rz.scp.css */
+/*Layout y Contenedores*/
+.contenedor-titulo[b-c447y8ttle] {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.contenedor-detalle[b-c447y8ttle] {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 1rem auto;
+    font-family: Arial, sans-serif;
+    gap: 1.5rem;
+}
+
+/*Formulario, Desc y Textarea*/
+.label-principal[b-c447y8ttle] {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.caja-texto[b-c447y8ttle] {
+    width: 100%;
+    height: 150px;
+    border: 3px solid black;
+    padding: 10px;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+    background-color: transparent; /* Por si usas modo oscuro */
+}
+
+.contador-letras[b-c447y8ttle] {
+    text-align: right;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/*Boton Virtual*/
+.opcion-virtual[b-c447y8ttle] {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.check-virtual[b-c447y8ttle] {
+    width: 25px;
+    height: 25px;
+    border: 3px solid black;
+    cursor: pointer;
+}
+
+/*Footer y Botones Juntos*/
+.footer-detalle[b-c447y8ttle] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espacio entre Volver y Editar */
+    margin-top: 1rem;
+}
+
+.btn-confirmar[b-c447y8ttle] {
+    background: white;
+    border: 3px solid black;
+    padding: 10px 40px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-confirmar:hover[b-c447y8ttle] {
+    background: #f0f0f0;
+}
+
+/* Botón Editar más grande */
+.btn-icono[b-c447y8ttle] {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.btn-editar[b-c447y8ttle] { 
+    color: #7aeeb4a4; 
+}
+
+.btn-editar:hover[b-c447y8ttle] { 
+    color: #7aeeb4; 
+}
 /* /Components/Pages/Lista.razor.rz.scp.css */
-.btn-borrar[b-ck55kzcbfm] {
-    color: #e24a4aab;
+.contenedor-pagina[b-ck55kzcbfm] {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra todo horizontalmente */
+    margin-top: 2rem;
+    width: 100%;
 }
 
-.btn-detalle[b-ck55kzcbfm] {
-    color: #d63bf57e;
+.header-acciones[b-ck55kzcbfm] {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre input y botones */
+    margin-bottom: 20px; /* Espacio con la tabla */
+    width: 100%;
+    max-width: 600px; /* Misma medida que la tabla para que encaje */
 }
 
-.btn-editar[b-ck55kzcbfm] {
-    color: #7aeeb4a4;
+.input-busqueda[b-ck55kzcbfm] {
+    flex-grow: 1; /* Hace que el input ocupe el espacio restante */
+    padding: 8px;
+    border: 3px solid black;
+    font-size: 16px;
+    outline: none;
 }
 
+.btn-buscar[b-ck55kzcbfm] {
+    padding: 8px 15px;
+    border: 3px solid black;
+    background: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: lowercase;
+}
+
+.btn-agregar[b-ck55kzcbfm] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border: 3px solid gray;
+    background: white;
+    color: #28a745; 
+    cursor: pointer;
+}
+
+/*Estilo de la tabla*/
+.table-reuniones[b-ck55kzcbfm] {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    border: 3px solid black;
+    font-family: Arial, sans-serif;
+}
+
+.table-reuniones th[b-ck55kzcbfm], 
+.table-reuniones td[b-ck55kzcbfm] {
+    border: 2px solid black;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.col-resumen[b-ck55kzcbfm] {
+    text-align: left;
+    width: 60%;
+    font-weight: 500;
+}
+
+.col-virtual[b-ck55kzcbfm] {
+    text-align: center;
+    font-weight: bold;
+    width: 15%;
+}
+
+.col-acciones[b-ck55kzcbfm] {
+    text-align: center;
+    width: 25%;
+}
+
+/*Estilo de los botones*/
 .btn-icono[b-ck55kzcbfm] {
     background: none;
     border: none;
     cursor: pointer;
     padding: 4px;
 }
+
+.btn-borrar[b-ck55kzcbfm] { color: #e24a4aab; }
+.btn-editar[b-ck55kzcbfm] { color: #7aeeb4a4; }
+.btn-detalle[b-ck55kzcbfm] { color: #d63bf57e; }
+
 .btn-borrar:hover[b-ck55kzcbfm] { color: #ff6b6b; }
-.btn-detalle:hover[b-ck55kzcbfm] { color: #d63bf5; }
 .btn-editar:hover[b-ck55kzcbfm] { color: #7aeeb4; }
+.btn-detalle:hover[b-ck55kzcbfm] { color: #d63bf5; }
+
+/*Estilo de la modal*/
+.confirm-backdrop[b-ck55kzcbfm] {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
 
 .confirm-box[b-ck55kzcbfm] {
     background: #1e1e3a;
@@ -401,16 +674,6 @@ main[b-dawmfx4d81] {
 .confirm-footer[b-ck55kzcbfm] {
     display: flex;
     gap: 8px;
-}
-
-.confirm-backdrop[b-ck55kzcbfm] {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.45);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
 }
 
 .btn-danger[b-ck55kzcbfm] {

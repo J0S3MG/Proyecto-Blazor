@@ -1,24 +1,107 @@
-.btn-borrar {
-    color: #e24a4aab;
+.contenedor-pagina {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra todo horizontalmente */
+    margin-top: 2rem;
+    width: 100%;
 }
 
-.btn-detalle {
-    color: #d63bf57e;
+.header-acciones {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre input y botones */
+    margin-bottom: 20px; /* Espacio con la tabla */
+    width: 100%;
+    max-width: 600px; /* Misma medida que la tabla para que encaje */
 }
 
-.btn-editar {
-    color: #7aeeb4a4;
+.input-busqueda {
+    flex-grow: 1; /* Hace que el input ocupe el espacio restante */
+    padding: 8px;
+    border: 3px solid black;
+    font-size: 16px;
+    outline: none;
 }
 
+.btn-buscar {
+    padding: 8px 15px;
+    border: 3px solid black;
+    background: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: lowercase;
+}
+
+.btn-agregar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border: 3px solid gray;
+    background: white;
+    color: #28a745; 
+    cursor: pointer;
+}
+
+/*Estilo de la tabla*/
+.table-reuniones {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    border: 3px solid black;
+    font-family: Arial, sans-serif;
+}
+
+.table-reuniones th, 
+.table-reuniones td {
+    border: 2px solid black;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.col-resumen {
+    text-align: left;
+    width: 60%;
+    font-weight: 500;
+}
+
+.col-virtual {
+    text-align: center;
+    font-weight: bold;
+    width: 15%;
+}
+
+.col-acciones {
+    text-align: center;
+    width: 25%;
+}
+
+/*Estilo de los botones*/
 .btn-icono {
     background: none;
     border: none;
     cursor: pointer;
     padding: 4px;
 }
+
+.btn-borrar { color: #e24a4aab; }
+.btn-editar { color: #7aeeb4a4; }
+.btn-detalle { color: #d63bf57e; }
+
 .btn-borrar:hover { color: #ff6b6b; }
-.btn-detalle:hover { color: #d63bf5; }
 .btn-editar:hover { color: #7aeeb4; }
+.btn-detalle:hover { color: #d63bf5; }
+
+/*Estilo de la modal*/
+.confirm-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
 
 .confirm-box {
     background: #1e1e3a;
@@ -37,16 +120,6 @@
 .confirm-footer {
     display: flex;
     gap: 8px;
-}
-
-.confirm-backdrop {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.45);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
 }
 
 .btn-danger {
