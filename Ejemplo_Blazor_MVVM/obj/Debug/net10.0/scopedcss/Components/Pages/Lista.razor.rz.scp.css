@@ -1,0 +1,141 @@
+.contenedor-pagina[b-cewuqukwa1] {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra todo horizontalmente */
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.header-acciones[b-cewuqukwa1] {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre input y botones */
+    margin-bottom: 20px; /* Espacio con la tabla */
+    width: 100%;
+    max-width: 600px; /* Misma medida que la tabla para que encaje */
+}
+
+.input-busqueda[b-cewuqukwa1] {
+    flex-grow: 1; /* Hace que el input ocupe el espacio restante */
+    padding: 8px;
+    border: 3px solid black;
+    font-size: 16px;
+    outline: none;
+}
+
+.btn-buscar[b-cewuqukwa1] {
+    padding: 8px 15px;
+    border: 3px solid black;
+    background: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: lowercase;
+}
+
+.btn-agregar[b-cewuqukwa1] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border: 3px solid gray;
+    background: white;
+    color: #28a745; 
+    cursor: pointer;
+}
+
+/*Estilo de la tabla*/
+.table-reuniones[b-cewuqukwa1] {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    border: 3px solid black;
+    font-family: Arial, sans-serif;
+}
+
+.table-reuniones th[b-cewuqukwa1], 
+.table-reuniones td[b-cewuqukwa1] {
+    border: 2px solid black;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.col-resumen[b-cewuqukwa1] {
+    text-align: left;
+    width: 60%;
+    font-weight: 500;
+}
+
+.col-virtual[b-cewuqukwa1] {
+    text-align: center;
+    font-weight: bold;
+    width: 15%;
+}
+
+.col-acciones[b-cewuqukwa1] {
+    text-align: center;
+    width: 25%;
+}
+
+/*Estilo de los botones*/
+.btn-icono[b-cewuqukwa1] {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.btn-borrar[b-cewuqukwa1] { color: #e24a4aab; }
+.btn-editar[b-cewuqukwa1] { color: #7aeeb4a4; }
+.btn-detalle[b-cewuqukwa1] { color: #d63bf57e; }
+
+.btn-borrar:hover[b-cewuqukwa1] { color: #ff6b6b; }
+.btn-editar:hover[b-cewuqukwa1] { color: #7aeeb4; }
+.btn-detalle:hover[b-cewuqukwa1] { color: #d63bf5; }
+
+/*Estilo de la modal*/
+.confirm-backdrop[b-cewuqukwa1] {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.confirm-box[b-cewuqukwa1] {
+    background: #1e1e3a;
+    border: 1.5px solid #e24b4a;
+    border-radius: 12px;
+    padding: 1.5rem;
+    max-width: 340px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: white;
+    text-align: center;
+}
+
+.confirm-footer[b-cewuqukwa1] {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-danger[b-cewuqukwa1] {
+    flex: 1;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    background: #e24b4a;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn-danger:hover[b-cewuqukwa1] {
+    background: #ff6b6b;
+}

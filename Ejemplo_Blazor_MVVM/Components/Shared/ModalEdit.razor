@@ -1,0 +1,59 @@
+@rendermode InteractiveServer
+@if (visible)
+{
+    <div class="modal-backdrop">
+        <div class="modal-box">
+
+            <div class="modal-header">
+                <h3>Editar reunión</h3>
+                <button class="btn-close" @onclick="Cerrar">✕</button>
+            </div>
+
+            <div class="modal-body">
+                <div class="field">
+                    <label>Descripción</label>
+                    <textarea @bind="copia!.Desc" placeholder="Descripción de la reunión"></textarea>
+                </div>
+
+                <div class="field-toggle">
+                    <span>Reunión virtual</span>
+                    <input type="checkbox" @bind="copia!.Virtual" />
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn-secondary" @onclick="Cerrar">Cancelar</button>
+                <button class="btn-primary" @onclick="Guardar">Guardar</button>
+            </div>
+
+        </div>
+    </div>
+}
+@code 
+{
+    [Parameter] public bool visible { get; set; }
+    [Parameter] public Reunion? reunion { get; set; }
+    [Parameter] public EventCallback<Reunion> OnGuardar { get; set; }
+    [Parameter] public EventCallback OnCerrar { get; set; }
+
+    private Reunion? copia; // ← trabajamos sobre la copia
+
+    // Cuando llega el parámetro, hacemos una copia
+    protected override void OnParametersSet()
+    {
+        if (reunion != null)
+        {
+            copia = new Reunion(reunion.Id, reunion.Desc, reunion.Virtual);
+        }
+    }
+
+    private async Task Guardar()
+    {
+        await OnGuardar.InvokeAsync(copia); // ← mandamos la copia editada
+    }
+
+    private async Task Cerrar()
+    {
+        await OnCerrar.InvokeAsync(); // ← descartamos la copia, el original no cambió
+    }
+}
