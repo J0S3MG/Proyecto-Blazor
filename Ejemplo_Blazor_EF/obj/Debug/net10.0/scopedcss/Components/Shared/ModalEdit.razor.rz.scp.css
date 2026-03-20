@@ -1,0 +1,132 @@
+.modal-backdrop[b-nxy9periii] {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-box[b-nxy9periii] {
+    background: #310e4e;
+    border: 1.5px solid #4a4aaa;
+    border-radius: 12px;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    color: white;
+}
+
+.modal-header[b-nxy9periii] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #4a4aaa55;
+    padding-bottom: 0.75rem;
+}
+
+.modal-header h3[b-nxy9periii] {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.btn-close[b-nxy9periii] {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #aaaaee;
+}
+
+.field[b-nxy9periii] {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.field label[b-nxy9periii] {
+    font-size: 12px;
+    color: #c6c6e0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.field input[b-nxy9periii],
+.field textarea[b-nxy9periii] {
+    background: #0a0a28;
+    border: 1.5px solid #4a4aaa88;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: white;
+    resize: vertical;
+}
+
+.field input:focus[b-nxy9periii],
+.field textarea:focus[b-nxy9periii] {
+    outline: none;
+    border-color: #7a7aee;
+    box-shadow: 0 0 0 3px #4a4aaa33;
+}
+
+.field-toggle[b-nxy9periii] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    background: #0a0a28;
+    border: 1.5px solid #4a4aaa55;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #aaaaee;
+}
+
+.modal-footer[b-nxy9periii] {
+    display: flex;
+    gap: 8px;
+    padding-top: 0.5rem;
+    border-top: 1px solid #4a4aaa33;
+}
+
+.btn-secondary[b-nxy9periii] {
+    flex: 1;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1.5px solid #4a4aaa;
+    background: transparent;
+    color: #aaaaee;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn-primary[b-nxy9periii] {
+    flex: 1;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(135deg, #4a4aaa, #7a4aee);
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn-primary:hover[b-nxy9periii] {
+    background: linear-gradient(135deg, #5a5abb, #8a5aff);
+}
+
+.btn-secondary:hover[b-nxy9periii] {
+    background: #4a4aaa22;
+}

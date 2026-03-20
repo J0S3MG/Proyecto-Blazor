@@ -1,0 +1,25 @@
+﻿@page "/form"
+@rendermode InteractiveServer
+@inject FormViewModel VM
+
+<div class="contenedor-detalle">
+    <div class="contenedor-titulo">
+        <h1>@VM.Titulo</h1>
+    </div>
+    <div class="form-group">
+        <label class="label-principal">Descripción (500 letras)</label>
+        <textarea class="caja-texto" @bind="VM.Reunion.Desc" maxlength="500"></textarea>
+        <div class="contador-letras">
+            @(VM.Reunion.Desc?.Length ?? 0) letras
+        </div>
+    </div>
+    <div class="opcion-virtual">
+        <label>¿Es virtual?</label>
+        <input type="checkbox" @bind="VM.Reunion.Virtual" class="check-virtual" />
+    </div>
+    <div class="footer-detalle">
+        <button class="btn-confirmar" @onclick="VM.VolverAtras">Volver</button>
+        <button class="btn-confirmar btn-editar" @onclick="() => VM.AgregarReunion(VM.Reunion)">Agregar</button>
+    </div>
+</div>
+@code { protected override void OnInitialized() => VM.Reunion = new Reunion(); }

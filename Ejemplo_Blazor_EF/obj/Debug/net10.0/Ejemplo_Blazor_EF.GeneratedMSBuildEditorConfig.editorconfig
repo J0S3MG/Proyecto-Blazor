@@ -1,0 +1,79 @@
+is_global = true
+build_property.TargetFramework = net10.0
+build_property.TargetFramework = net10.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v10.0
+build_property.RootNamespace = Ejemplo_Blazor_EF
+build_property.RootNamespace = Ejemplo_Blazor_EF
+build_property.ProjectDir = /run/media/system/HDD/Repos/Proyecto-Blazor/Ejemplo_Blazor_EF/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /run/media/system/HDD/Repos/Proyecto-Blazor/Ejemplo_Blazor_EF
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 10.0
+build_property.EnableCodeStyleSeverity = 
+
+[/run/media/system/HDD/Repos/Proyecto-Blazor/Ejemplo_Blazor_EF/Components/App.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9BcHAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/run/media/system/HDD/Repos/Proyecto-Blazor/Ejemplo_Blazor_EF/Components/Pages/Error.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9FcnJvci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/run/media/system/HDD/Repos/Proyecto-Blazor/Ejemplo_Blazor_EF/Components/Pages/NotFound.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Ob3RGb3VuZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/run/media/system/HDD/Repos/Proyecto-Blazor/Ejemplo_Blazor_EF/Components/Routes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Sb3V0ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/run/media/system/HDD/Repos/Proyecto-Blazor/Ejemplo_Blazor_EF/Components/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9fSW1wb3J0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/run/media/system/HDD/Repos/Proyecto-Blazor/Ejemplo_Blazor_EF/Components/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvTWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-zxnx3u6d7n
+
+[/run/media/system/HDD/Repos/Proyecto-Blazor/Ejemplo_Blazor_EF/Components/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-cdmhbk38tk
+
+[/run/media/system/HDD/Repos/Proyecto-Blazor/Ejemplo_Blazor_EF/Components/Layout/ReconnectModal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvUmVjb25uZWN0TW9kYWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-52gt5s9pbn
+
+[/run/media/system/HDD/Repos/Proyecto-Blazor/Ejemplo_Blazor_EF/Components/Pages/Detalle.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9EZXRhbGxlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-5kp1tilfk6
+
+[/run/media/system/HDD/Repos/Proyecto-Blazor/Ejemplo_Blazor_EF/Components/Pages/Form.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Gb3JtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-8rrytqg27p
+
+[/run/media/system/HDD/Repos/Proyecto-Blazor/Ejemplo_Blazor_EF/Components/Pages/Lista.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9MaXN0YS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-mdeuqj597d
+
+[/run/media/system/HDD/Repos/Proyecto-Blazor/Ejemplo_Blazor_EF/Components/Shared/ModalEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9TaGFyZWQvTW9kYWxFZGl0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-nxy9periii

@@ -6,10 +6,10 @@ public class ReunionRepository: IReunionRepository
 {
     public List<Reunion> reunions = new()
     {
-        new(1, "faihsuidhaiusdhaiurhiuaiuabsiudaisudfbaiusbfdiuasbdf", true),
-        new(2, "dasnduasnduiasnduiansiudnasiunduiasnduasodnadasnoidaosidnoiansdoansd", false),
-        new(3,"asdasdasdvchiuofhgwekropgjdgfkgmdpogjdsfjguosajreosflsm,dv",false),
-        new(4,"adsndausnduasndoasdpas",true)
+        new(1, "Revisión de arquitectura: Implementación de patrón MVVM en el módulo de reuniones.", true),
+        new(2, "Sincronización de equipo: Discusión sobre la migración de SQL Server a PostgreSQL.", false),
+        new(3, "Capacitación técnica: Mejores prácticas para el uso de Dependency Injection en .NET 8.", false),
+        new(4, "Daily meeting: Seguimiento de tareas del Proyecto Verano y despliegue en Railway.", true)
     };
 
     public Reunion Insert(Reunion r)
