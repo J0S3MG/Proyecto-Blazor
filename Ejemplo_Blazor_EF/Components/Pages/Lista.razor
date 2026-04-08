@@ -33,7 +33,7 @@ else
             @foreach(var r in VM.ReunionesFiltradas)
             {
                <tr id="@r.Id">
-                  <td class="col-resumen">@(r.Desc?.Length > 30 ? r.Desc[..30] + "..." : r.Desc)</td>
+                  <td class="col-resumen">@(r.Desc?.Length > 20 ? r.Desc[..20] + "..." : r.Desc)</td>
                   <td class="col-virtual">@(r.Virtual ? "SI" : "NO")</td>
                   <td class="col-acciones">
                      <button class="btn-icono btn-borrar" @onclick="() => VM.PrepararBorrado(r.Id)">

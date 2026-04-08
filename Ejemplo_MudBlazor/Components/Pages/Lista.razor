@@ -1,0 +1,117 @@
+@page "/"
+@rendermode InteractiveServer
+@inject IDialogService DialogService
+@inject ISnackbar Snackbar
+@inject ListaViewModel VM
+
+<MudPopoverProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudStack AlignItems="AlignItems.Center" Justify="Justify.Center">
+    <MudText Typo="Typo.h1">@VM.Titulo</MudText>
+</MudStack>
+
+@if (VM.Reuniones.Count == 0)
+{
+    <MudText Typo="Typo.body1">No hay Reuniones</MudText>
+}
+else
+{
+    <MudContainer>
+        <MudStack Row="true" AlignItems="AlignItems.Center" Spacing="2" Class="mb-4">
+            <MudTextField @bind-Value="VM.TextoBusqueda" 
+                Placeholder="Buscar reunión..." 
+                Variant="Variant.Outlined" 
+                Adornment="Adornment.Start" 
+                AdornmentIcon="@Icons.Material.Filled.Search" 
+                Margin="Margin.Dense" 
+                OnAdornmentClick="VM.Filtrar"/>
+        
+            <MudTooltip Text="Nueva Reunión"> 
+                <MudFab Color="Color.Primary" StartIcon="@Icons.Material.Filled.Add" OnClick="VM.IrAFormulario" Size="Size.Medium" />
+            </MudTooltip>
+        </MudStack>
+
+        <MudTable Items="@VM.ReunionesFiltradas" Hover="true" Elevation="2" RowStyle="font-size: 1.25rem; height: 80px;">
+            <HeaderContent>
+                <MudTh><MudText Typo="Typo.h6">Resumen</MudText></MudTh>
+                <MudTh><MudText Typo="Typo.h6">Virtual</MudText></MudTh>
+                <MudTh Style="text-align:right"><MudText Typo="Typo.h6">Acciones</MudText></MudTh>
+            </HeaderContent>
+            <RowTemplate>
+                <MudTd DataLabel="Resumen">
+                    <MudText Typo="Typo.body1">
+                        @(context.Desc?.Length > 20 ? context.Desc[..20] + "..." : context.Desc)
+                    </MudText>
+                </MudTd>
+                <MudTd DataLabel="Virtual">
+                    <MudChip T="string" Variant="Variant.Text" Color="@(context.Virtual ? Color.Success : Color.Default)">
+                        @(context.Virtual ? "SÍ" : "NO")
+                    </MudChip>
+                </MudTd>
+                <MudTd DataLabel="Acciones" Style="text-align:right">
+                    <MudIconButton Icon="@Icons.Material.Filled.Info" Color="Color.Info" 
+                        OnClick="@(() => VM.IrADetalle(context.Id))" />
+                    
+                    @* ✅ CORRECCIÓN CLAVE: llamamos AbrirEdicion que hace StateHasChanged en el razor *@
+                     <MudIconButton Icon="@Icons.Material.Filled.Edit" 
+               Color="Color.Success" 
+               OnClick="@(() => VM.SeleccionarParaEditar(context))" />
+                    
+                    <MudIconButton Icon="@Icons.Material.Filled.Delete" Color="Color.Error" 
+                        OnClick="@(() => ConfirmarBorrado(context.Id))" />
+                </MudTd>
+            </RowTemplate>
+        </MudTable>
+    </MudContainer>
+}
+
+@* Sin @bind-visible, pasamos visible directamente *@
+ <ModalEdit @bind-visible="VM.ModalVisible" 
+           reunion="VM.ReunionSelec" 
+           OnCerrar="VM.CerrarModal" 
+           OnGuardar="VM.GuardarEdicion" />
+@code { 
+    protected override void OnInitialized()
+    {
+        VM.CargarReuniones();
+        //VM.OnChanged = () => InvokeAsync(StateHasChanged);
+    }
+
+    // ✅ CORRECCIÓN CLAVE: StateHasChanged se llama acá en el .razor, no desde el ViewModel
+    private void AbrirEdicion(Reunion r)
+    {
+        VM.SeleccionarParaEditar(r);
+        StateHasChanged();
+    }
+
+    private void CerrarModal()
+    {
+        VM.CerrarModal();
+        StateHasChanged();
+    }
+
+    private void GuardarEdicion(Reunion editada)
+    {
+        VM.GuardarEdicion(editada);
+        StateHasChanged();
+    }
+
+    private async Task ConfirmarBorrado(int id)
+    {
+        bool? resultado = await DialogService.ShowMessageBoxAsync(
+            "Confirmar acción", 
+            "¿Seguro que querés borrar esta reunión?", 
+            yesText: "Borrar", 
+            cancelText: "Cancelar"
+        );
+        
+        if (resultado == true)
+        {
+            VM.ConfirmarBorrado(id);
+            Snackbar.Add("Reunión eliminada", Severity.Success);
+            StateHasChanged(); 
+        }
+    }
+}
